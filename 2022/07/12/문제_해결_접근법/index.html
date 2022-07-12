@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"stardust6653.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="문제 해결 접근알고리즘(algorism)이란? 특정 작업을 달성하기 위한 과정이나 일련의 단계  알고리즘 문제를 해결하기 위한 과정 문제 해결을 위한 계획 수립 문제 해결 패턴을 파악 문제를 단순화   문제의 이해예시 스스로의 단어로 문제를 다시 말할 수 있는가?   상대방의 의도를 파악해 도리어 상대방에게 질문을 할만큼 그 의도를 이해할 수 있는가?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="문제 해결 접근법">
+<meta property="og:url" content="http://stardust6653.github.io/2022/07/12/%EB%AC%B8%EC%A0%9C_%ED%95%B4%EA%B2%B0_%EC%A0%91%EA%B7%BC%EB%B2%95/index.html">
+<meta property="og:site_name" content="소박한 기술블로그">
+<meta property="og:description" content="문제 해결 접근알고리즘(algorism)이란? 특정 작업을 달성하기 위한 과정이나 일련의 단계  알고리즘 문제를 해결하기 위한 과정 문제 해결을 위한 계획 수립 문제 해결 패턴을 파악 문제를 단순화   문제의 이해예시 스스로의 단어로 문제를 다시 말할 수 있는가?   상대방의 의도를 파악해 도리어 상대방에게 질문을 할만큼 그 의도를 이해할 수 있는가?">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-07-12T06:14:27.000Z">
+<meta property="article:modified_time" content="2022-07-12T10:01:06.696Z">
+<meta property="article:author" content="Soye Park">
+<meta property="article:tag" content="algorism">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://stardust6653.github.io/2022/07/12/%EB%AC%B8%EC%A0%9C_%ED%95%B4%EA%B2%B0_%EC%A0%91%EA%B7%BC%EB%B2%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://stardust6653.github.io/2022/07/12/%EB%AC%B8%EC%A0%9C_%ED%95%B4%EA%B2%B0_%EC%A0%91%EA%B7%BC%EB%B2%95/","path":"2022/07/12/문제_해결_접근법/","title":"문제 해결 접근법"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>문제 해결 접근법 | 소박한 기술블로그</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">소박한 기술블로그</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">by stardust</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EC%A0%91%EA%B7%BC"><span class="nav-number">1.</span> <span class="nav-text">문제 해결 접근</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorism-%EC%9D%B4%EB%9E%80"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">알고리즘(algorism)이란?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EA%B3%BC%EC%A0%95"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">알고리즘 문제를 해결하기 위한 과정</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C%EC%9D%98-%EC%9D%B4%ED%95%B4"><span class="nav-number">1.0.1.</span> <span class="nav-text">문제의 이해</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%98%88%EC%8B%9C"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">예시</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EA%B5%AC%EC%B2%B4%EC%A0%81-%EC%98%88%EC%A0%9C%EB%93%A4%EA%B8%B0"><span class="nav-number">1.0.2.</span> <span class="nav-text">구체적 예제들기</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%98%88%EC%8B%9C-%EB%91%90%EA%B0%9C%EC%9D%98-%EC%88%AB%EC%9E%90%EB%A5%BC-%EC%9E%85%EB%A0%A5%EB%B0%9B%EC%95%84-%ED%95%A9%EC%9D%84-%EB%B0%98%ED%99%98%ED%95%98%EB%8A%94-%ED%95%A8%EC%88%98-%EC%9E%91%EC%84%B1"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">예시, 두개의 숫자를 입력받아 합을 반환하는 함수 작성</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%84%B8%EB%B6%80-%EB%B6%84%EC%84%9D"><span class="nav-number">1.0.3.</span> <span class="nav-text">세부 분석</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%98%88%EC%8B%9C-1"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">예시</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%95%B4%EA%B2%B0-%EB%98%90%EB%8A%94-%EB%8B%A8%EC%88%9C%ED%99%94lsls"><span class="nav-number">1.0.4.</span> <span class="nav-text">해결 또는 단순화lsls</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%98%EC%82%AC%EC%BD%94%EB%93%9C%EB%A5%BC-%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C-%EC%BD%94%EB%93%9C%EB%A5%BC-%EB%A7%8C%EB%93%A4%EA%B3%A0-%EC%A0%95%EB%A6%AC%ED%95%9C%EB%8B%A4"><span class="nav-number">1.1.</span> <span class="nav-text">의사코드를 기준으로 코드를 만들고 정리한다.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%90%98%EB%8F%8C%EC%95%84%EB%B3%B4%EA%B8%B0%EC%99%80-%EB%A6%AC%ED%8E%99%ED%84%B0"><span class="nav-number">1.1.1.</span> <span class="nav-text">되돌아보기와 리펙터</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%9E%91%EC%84%B1%ED%95%9C-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B3%A0-%ED%9A%A8%EC%9C%A8%EC%84%B1%EA%B3%BC-%EA%B0%80%EB%8F%85%EC%84%B1%EC%9D%84-%EC%A0%90%EA%B2%80%ED%95%9C%EB%8B%A4-%EB%A9%B4%EC%A0%91-%EC%8B%9C-%EC%A7%88%EB%AC%B8%ED%95%9C%EB%8B%A4"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">작성한 코드를 살펴보고 효율성과 가독성을 점검한다. (면접 시 질문한다)</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Soye Park</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://stardust6653.github.io/2022/07/12/%EB%AC%B8%EC%A0%9C_%ED%95%B4%EA%B2%B0_%EC%A0%91%EA%B7%BC%EB%B2%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Soye Park">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="소박한 기술블로그">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="문제 해결 접근법 | 소박한 기술블로그">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          문제 해결 접근법
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-07-12 15:14:27 / Modified: 19:01:06" itemprop="dateCreated datePublished" datetime="2022-07-12T15:14:27+09:00">2022-07-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="문제-해결-접근"><a href="#문제-해결-접근" class="headerlink" title="문제 해결 접근"></a>문제 해결 접근</h1><h4 id="알고리즘-algorism-이란"><a href="#알고리즘-algorism-이란" class="headerlink" title="알고리즘(algorism)이란?"></a>알고리즘(algorism)이란?</h4><blockquote>
+<p>특정 작업을 달성하기 위한 과정이나 일련의 단계</p>
+</blockquote>
+<h4 id="알고리즘-문제를-해결하기-위한-과정"><a href="#알고리즘-문제를-해결하기-위한-과정" class="headerlink" title="알고리즘 문제를 해결하기 위한 과정"></a>알고리즘 문제를 해결하기 위한 과정</h4><ol>
+<li>문제 해결을 위한 계획 수립</li>
+<li>문제 해결 패턴을 파악</li>
+<li>문제를 단순화</li>
+</ol>
+<hr>
+<h3 id="문제의-이해"><a href="#문제의-이해" class="headerlink" title="문제의 이해"></a>문제의 이해</h3><h4 id="예시"><a href="#예시" class="headerlink" title="예시"></a>예시</h4><ol>
+<li>스스로의 단어로 문제를 다시 말할 수 있는가?</li>
+</ol>
+<ul>
+<li>상대방의 의도를 파악해 도리어 상대방에게 질문을 할만큼 그 의도를 이해할 수 있는가?</li>
+</ul>
+<ol start="2">
+<li>문제의 입력값을 정확하게 알고 있는가?</li>
+<li>문제의 해결방법에서 나와야하는 출력을 알고 있는가?</li>
+<li>현재 문제를 해결할 수 있는 정보가 충분한 지 파악 가능한가?</li>
+<li>현재 문제에서 가장 중요한 게 무엇인 지 파악 가능한가?</li>
+</ol>
+<hr>
+<h3 id="구체적-예제들기"><a href="#구체적-예제들기" class="headerlink" title="구체적 예제들기"></a>구체적 예제들기</h3><h4 id="예시-두개의-숫자를-입력받아-합을-반환하는-함수-작성"><a href="#예시-두개의-숫자를-입력받아-합을-반환하는-함수-작성" class="headerlink" title="예시, 두개의 숫자를 입력받아 합을 반환하는 함수 작성"></a>예시, 두개의 숫자를 입력받아 합을 반환하는 함수 작성</h4><ol>
+<li>간단한 예부터 시작 (1+2, 5+9…)</li>
+<li>더 복잡한 예제로 발전 (2,402,059,123,590,000 + 298,029,490…)</li>
+<li>빈 입력이 있는 예제를 탐색 (“” + “”…)</li>
+<li>잘못된 입력이 있는 예제 탐색 (“23” + 가나다)</li>
+</ol>
+<hr>
+<h3 id="세부-분석"><a href="#세부-분석" class="headerlink" title="세부 분석"></a>세부 분석</h3><blockquote>
+<p>코드를 작성할 때 단계별로 세분화해서 분석하는 것이 중요하다.<br>문제를 이해하고 의사코드로 작성해보며, 해결책의 기본 구성을 작성한다</p>
+</blockquote>
+<h4 id="예시-1"><a href="#예시-1" class="headerlink" title="예시"></a>예시</h4><blockquote>
+<p>위와 같은 방법으로 코드를 작성하기 전 내가 취해야할 단계를 명시적으로 작성하고(의사코드), 개념적 문제나 오해가 남아있는 지를 파악하며, 세부 사항(ex. language syntax)에 대해서 고민하는 등 자세를 취할 수 있다.</p>
+</blockquote>
+<hr>
+<h3 id="해결-또는-단순화lsls"><a href="#해결-또는-단순화lsls" class="headerlink" title="해결 또는 단순화lsls"></a>해결 또는 단순화lsls</h3><h2 id="의사코드를-기준으로-코드를-만들고-정리한다"><a href="#의사코드를-기준으로-코드를-만들고-정리한다" class="headerlink" title="의사코드를 기준으로 코드를 만들고 정리한다."></a>의사코드를 기준으로 코드를 만들고 정리한다.</h2><hr>
+<h3 id="되돌아보기와-리펙터"><a href="#되돌아보기와-리펙터" class="headerlink" title="되돌아보기와 리펙터"></a>되돌아보기와 리펙터</h3><h4 id="작성한-코드를-살펴보고-효율성과-가독성을-점검한다-면접-시-질문한다"><a href="#작성한-코드를-살펴보고-효율성과-가독성을-점검한다-면접-시-질문한다" class="headerlink" title="작성한 코드를 살펴보고 효율성과 가독성을 점검한다. (면접 시 질문한다)"></a>작성한 코드를 살펴보고 효율성과 가독성을 점검한다. (면접 시 질문한다)</h4><ul>
+<li>결과를 확인할 수 있는지</li>
+<li>결과를 다르게 도출할 수 있는 지</li>
+<li>코드 가독성이 좋은 지</li>
+<li>사용한 방법을 다른 문제에 재사용 가능한 지</li>
+<li>성능을 더 최적화할 방법이 있는 지</li>
+<li>리팩토링할 다른 방법을 생각할 수 있는 지</li>
+<li>다른 사람들의 풀이를 확인해볼 것</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/algorism/" rel="tag"># algorism</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/07/12/BigO/" rel="next" title="BigO">
+                  BigO <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Soye Park</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
