@@ -117,12 +117,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -151,6 +151,105 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://stardust6653.github.io/2022/07/13/problem-solving-pattern/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Soye Park">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="소박한 기술블로그">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 소박한 기술블로그">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/13/problem-solving-pattern/" class="post-title-link" itemprop="url">문제 해결 패턴 1) Frequency Counter</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-07-13 17:08:49 / Modified: 18:51:47" itemprop="dateCreated datePublished" datetime="2022-07-13T17:08:49+09:00">2022-07-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Frequency-Counter-빈도-카운터"><a href="#Frequency-Counter-빈도-카운터" class="headerlink" title="Frequency Counter (빈도 카운터)"></a>Frequency Counter (빈도 카운터)</h1><blockquote>
+<p>자바스크립트 객체를 사용해서 다양한 값과 빈도를 수집하는 것</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>여러 데이터 사이 (혹은 입력값과 데이터 사이에) 서로 비슷한 값으로 구성되어 있는 지, 서로 아나그램₁으로(하단부 참조) 구성되어있는지 등 두 개 이상의 빈도 혹은 특정하게 발생하는 빈도를 비교할 때 유용하다</p>
+</blockquote>
+<blockquote>
+<p>중첩된 루프를 사용해 O(n²)의 시간 복잡도를 가지거나, indexOf()메소드와 같이 중첩된 루프를 내포한 메소드에 비해 O(n)의 시간복잡도를 가지게 되므로 계산시간이 더 빠르다.</p>
+</blockquote>
+<hr>
+<h3 id="예시"><a href="#예시" class="headerlink" title="예시"></a>예시</h3><blockquote>
+<p>문제 내용<br>두개의 배열을 입력받아 arr2가 arr1의 요소들을 제곱한 값으로 배열되어있는 지(순서는 무관) 확인할 수 있는 함수를 만드세요.</p>
+</blockquote>
+<blockquote>
+<p>중첩된 루프를 사용한 해결</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">checkedSame</span>(<span class="params">arr1, arr2</span>)&#123;</span><br><span class="line">  <span class="comment">// 조건 중 가장 파악이 쉬운 배열길이로 1차적으로 선별</span></span><br><span class="line">  <span class="keyword">if</span>(arr1.<span class="property">length</span> !== arr2.<span class="property">length</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr1.<span class="property">length</span>; i++)&#123;</span><br><span class="line">    <span class="comment">// indexOf 메소드를 활용해 arr1[i]의 제곱이 맞는 지 각 요소별로 확인</span></span><br><span class="line">    <span class="keyword">let</span> check = arr2.<span class="title function_">indexOf</span>(arr1[i] ** <span class="number">2</span>)</span><br><span class="line">    <span class="comment">// 만약 indexOf 값이 -1이 나온다면 일치하지 않는다는 의미이므로 false를 리턴</span></span><br><span class="line">    <span class="keyword">if</span>(check === -<span class="number">1</span>)&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//arr2 에서 확인된 요소들을 하나씩 제거 (과정확인)</span></span><br><span class="line">    arr2.<span class="title function_">splice</span>(check, <span class="number">1</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 위 반복문을 무사히 통과했다면 true</span></span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 위 방식의 경우 O(n^2)만큼의 시간복잡도를 가진다. 왜냐면 for문과 indexOf() 메소드 사용으로 반복문이 중첩되어있는 상태이기 때문이다. 이 때문에 배열의 길이가 늘어나면 시간 복잡도가 빠르게 상승한다.</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>빈도 카운터 (Frequency Counter)를 이용해 해결</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">checkedSame</span>(<span class="params">arr1, arr2</span>)&#123;</span><br><span class="line">  <span class="comment">// 위 방법과 동일하게 가장 파악이 쉬운 배열길이로 1차적 선별</span></span><br><span class="line">  <span class="keyword">if</span>(arr1.<span class="property">length</span> !== arr2.<span class="property">length</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 각 배열이 위치할 빈 객체 생성</span></span><br><span class="line">  <span class="keyword">let</span> frequencyCounter1 = &#123;&#125;</span><br><span class="line">  <span class="keyword">let</span> frequencyCounter2 = &#123;&#125;</span><br><span class="line">  <span class="comment">// for of 문이므로 배별의 값에 따라 반복된다.</span></span><br><span class="line">  <span class="comment">// value값으로 key가 추가되고, 있다면 1을, 동일요소가 더 있다면 +1씩을 추가한다.</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> value <span class="keyword">of</span> arr1)&#123;</span><br><span class="line">    frequencyCounter1[value] = (frequencyCounter1[value] || <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> value <span class="keyword">of</span> arr2)&#123;</span><br><span class="line">    frequencyCounter2[value] = (frequencyCounter1[value] || <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line"> <span class="comment">//for in 문은 인덱스 기반으로 배열 요소를 꺼내 사용한다.</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> frequencyCounter1)&#123;</span><br><span class="line">    <span class="comment">// 불러들인 frequencyCounter1의 key값의 제곱이 frequencyCounter2 의 키값과 동일하지 않으면 false를 리턴</span></span><br><span class="line">    <span class="keyword">if</span>(!(key ** <span class="number">2</span> <span class="keyword">in</span> frequencyCounter2))&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(frequencyCounter2[key ** <span class="number">2</span>] !== frequencyCounter1[key])&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 위 방식으로 접근하게되면, 중첩 없이 반복문이 쓰여지므로 반복문 갯수 * n의 시간복잡도를 가진다. 하지만 일반적으로 앞을 정리하고 O(n)만큼의 시간복잡도를 가진다고 얘기한다.</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>빈도 카운터는 보통 객체를 사용한다. 배열이나 문자열의 내용을 분석하는 것으로 선형 구조를 가지며 해당 분석은 문자열이나 배열에서 생성된 다른 객체의 형태와 신속하게 비교할 수 있다</p>
+</blockquote>
+<hr>
+<p><a target="_blank" rel="noopener" href="https://medium.datadriveninvestor.com/3-ways-to-solve-the-anagram-algorithm-problem-61c2ba20b79e">아나그램(anagram)₁</a> 이란 두 문자열의 배치(나열 순서)는 다르지만 알파벳 구성이 일치하는 경우를 말한다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
