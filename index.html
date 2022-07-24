@@ -117,7 +117,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -151,6 +151,137 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://stardust6653.github.io/2022/07/25/programmers-practice-7-24/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Soye Park">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="소박한 기술블로그">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 소박한 기술블로그">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/25/programmers-practice-7-24/" class="post-title-link" itemprop="url">프로그래머스 연습문제 풀이 7.24</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-07-25 00:55:01 / Modified: 01:45:47" itemprop="dateCreated datePublished" datetime="2022-07-25T00:55:01+09:00">2022-07-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="프로그래머스-연습-문제-풀기"><a href="#프로그래머스-연습-문제-풀기" class="headerlink" title="프로그래머스 연습 문제 풀기"></a>프로그래머스 연습 문제 풀기</h1><blockquote>
+<p>연습문제부터 시작해서 매일 매일 문제를 풀자고 다짐했으나, 할 것이 많다는 핑계로 며칠을 미뤄왔다. 다시 풀기 시작.. 열심히 하자구..!</p>
+</blockquote>
+<h3 id="연습문제-1"><a href="#연습문제-1" class="headerlink" title="연습문제 1"></a>연습문제 1</h3><blockquote>
+<p>문제 설명 <br/><br>정수를 담고 있는 배열 arr의 평균값을 return하는 함수, solution을 완성해보세요.</p>
+</blockquote>
+<blockquote>
+<p>제한 조건 <br/></p>
+</blockquote>
+<ul>
+<li>arr은 길이 1 이상, 100 이하인 배열입니다.</li>
+<li>arr의 원소는 -10,000 이상 10,000 이하인 정수입니다.</li>
+</ul>
+<h3 id="내-풀이"><a href="#내-풀이" class="headerlink" title="내 풀이"></a>내 풀이</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">solution</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> answer = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 배열 내부에 있는 모든 숫자를 반복문을 통해 모두 더한다</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++)&#123;</span><br><span class="line">        answer += arr[i]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 더 해진 결과 값을 배열의 길이로 나눈다</span></span><br><span class="line">    <span class="keyword">return</span> answer/arr.<span class="property">length</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="느낀-점"><a href="#느낀-점" class="headerlink" title="느낀 점"></a>느낀 점</h3><blockquote>
+<p>처음보자마자 이건 반복문으로 풀어야겠다는 생각이 들었다. 어차피 숫자들로 이루어진 배열이니 요소를 모두 더하고 배열의 길이만큼 나누면 되는 간단한 문제이므로 크게 어려움이 없었다.</p>
+</blockquote>
+<blockquote>
+<p>하지만 다른 사람들의 풀이를 보니 reduce() 라는 특이한 메서드를 사용하는 것을 봤다.<br>그래서 까먹지 않기 위해 아래 내용을 정리했다.</p>
+</blockquote>
+<h3 id="reduce-정리"><a href="#reduce-정리" class="headerlink" title="reduce 정리"></a>reduce 정리</h3><blockquote>
+<p>arr.reduce(callback[, initialValue], 초기값(생략가능)) 라는 기본 형태를 가진 이 메서드는, 배열의 모든 요소를 순회하면서 리듀서 함수라는 콜백함수를 실행 시키는데, 이 때 리듀서 함수의 매개변수는 (accumulate, currentValue) 값을 필수적으로 받게 된다. 이 때 최종값은 return이 이루어지게 된다.</p>
+</blockquote>
+<blockquote>
+<p>reduce() 예시</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> acc - cur)) <span class="comment">// - 13</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> acc + cur)) <span class="comment">// 15</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> acc * cur)) <span class="comment">// 120</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> acc / cur)) <span class="comment">// 0.008333333333333333</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> acc - cur, <span class="number">10</span>)) <span class="comment">// -5</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> acc + cur, <span class="number">10</span>)) <span class="comment">// 25</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>위 예시에서 보듯 배열의 첫 인자는 acc 값으로 들어가며, 그 이후 계산된 값이 계속해서 acc 자리로 리턴되며 배열 전체를 순회한다. 다만 이때 콜백 함수 이외에 intialValue를 초기값으로 받으면 그 숫자부터 acc자리로 가 순회를 시작한다.</p>
+</blockquote>
+<hr>
+<h3 id="연습문제-2"><a href="#연습문제-2" class="headerlink" title="연습문제 2"></a>연습문제 2</h3><blockquote>
+<p>문제 설명 <br/><br>프로그래머스 모바일은 개인정보 보호를 위해 고지서를 보낼 때 고객들의 전화번호의 일부를 가립니다.<br>전화번호가 문자열 phone_number로 주어졌을 때, 전화번호의 뒷 4자리를 제외한 나머지 숫자를 전부 *으로 가린 문자열을 리턴하는 함수, solution을 완성해주세요.</p>
+</blockquote>
+<blockquote>
+<p>제한 조건</p>
+</blockquote>
+<ul>
+<li>phone_number는 길이 4 이상, 20이하인 문자열입니다.</li>
+</ul>
+<h3 id="내-풀이-1"><a href="#내-풀이-1" class="headerlink" title="내 풀이"></a>내 풀이</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">solution</span>(<span class="params">phone_number</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> answer = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="comment">// 매개변수 번호를 answer 변수에 담고</span></span><br><span class="line">  answer = phone_number;</span><br><span class="line">  <span class="comment">// 뒷자리 4자리를 제외한 나머지를 변경해야하므로 문자열길이 - 4 를 해 length를 정의한다.</span></span><br><span class="line">  <span class="keyword">let</span> length = answer.<span class="property">length</span> - <span class="number">4</span>;</span><br><span class="line">  <span class="comment">// 정규식을 활용해 앞자리 번호를 찾는다</span></span><br><span class="line">  <span class="keyword">let</span> regExp = <span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&quot;^[0-9]&#123;&quot;</span> + length + <span class="string">&quot;&#125;&quot;</span>, <span class="string">&quot;g&quot;</span>);</span><br><span class="line">  <span class="comment">// replace 메소드를 사용하면 문자열이 통으로 치환되기 때문에, 알맞은 *의 갯수를 찾기위해서 반복문을 활용해 *을 제조한다(?)</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">makeStar</span>(<span class="params">length</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> blank = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">      blank += <span class="string">&quot;*&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> blank;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 정규식으로 얻어진 앞자리를 반복문으로 만들어진 * 묶음으로 치환한다</span></span><br><span class="line">  answer = answer.<span class="title function_">replace</span>(regExp, <span class="title function_">makeStar</span>(length));</span><br><span class="line">  <span class="keyword">return</span> answer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">solution</span>(<span class="string">&quot;027778888&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="느낀-점-1"><a href="#느낀-점-1" class="headerlink" title="느낀 점"></a>느낀 점</h3><blockquote>
+<p>정규식을 활용해서 풀이가 가능할 것 같아 정규식을 택했다. 하지만 익숙하지 않은 정규식 문법 덕분에 한참을 헤매였다. 처음에는 뒷자리 4자리를 찾아 그것을 제외하고 모든 문자를 * 로 변환시키면 되겠다고 생각하고 접근하였으나, 뒷 4자리 접근 이후에는 도저히 풀이가 진행이 되지 않아 정규식에 대해 알아보니, 정규식은 역일치를 할 수 없다고 한다. (물론 역일치를 하라면 방법은 있다고는 하나 공식적으로 지원 안하는..)</p>
+</blockquote>
+<blockquote>
+<p>그래서 방법을 선회해 앞자리 번호를 찾아 변경하는 쪽으로 진행해보았다. 고정되어있는 뒷 4자리와는 달리 앞자리는 언제든 번호의 길이가 변경이 될 수 있다는 점에서 풀이에 대해 고민을 해보았다.</p>
+</blockquote>
+<blockquote>
+<p>쉽게 접근하기로 하고 전체 길이에서 뒷 4자리를 뺀 만큼을 길이로 정했다.<br/> 하지만 그 다음 문제가 있었다. 정규식에 자바스크립트 변수를 어떻게 포함시키는 지였는데, 검색을 해보니 의외로 단순했다. <code>new RegExp</code> 로 생성된 정규식 부분을 문자 리터럴로 감싸고 +연산자를 통해 변수를 더해주면 됐다.</p>
+</blockquote>
+<blockquote>
+<p>그렇게 앞자리 번호를 찾으니 또 다른 문제가 생겼다. replace() 메서드 특성 상 문자열을 치환 하는 것이다 보니 앞자리 번호가 문자열의 길이와는 다르게 * 로 치환되는 것이었다.</p>
+</blockquote>
+<blockquote>
+<p>하지만 나는 앞자리의 길이를 알았고 그래서 반복문을 통해 앞자리의 문자 갯수만큼 *의 만들어 replace메서드로 대체해주었다.</p>
+</blockquote>
+<blockquote>
+<p>이전 문제와는 다르게 정규식은 익숙하지 않고, replace함수의 특성 탓에 *로 치환도 맘대로 되지 않다보니 방법에 대해 생각을 계속 한다고 시간이 꽤 걸렸던 것 같다. 하지만 그래도 어떻게든 접근해서 풀었다는 것이 의미가 있지 않나 싶다. 지레 겁먹지 말고 차근차근 사고하며 문제를 열심히 풀어볼 것!</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
